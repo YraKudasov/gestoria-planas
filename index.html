@@ -1,1 +1,335 @@
-__INDEX_HTML__
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestoria Planas i Associats — Gestoria a Vilafranca del Penedès</title>
+<meta name="description" content="Gestoria Planas i Associats a Vilafranca del Penedès: fiscal, laboral, mercantil, vehicles, assegurances, immobiliària, herències i startups. Tel. 938 17 04 95.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Gestoria Planas i Associats",
+  "description": "Gestoria i assessoria a Vilafranca del Penedès: fiscal, laboral, mercantil, vehicles, assegurances, immobiliària, herències i startups.",
+  "telephone": "+34938170495",
+  "email": "info@gestoriaplanas.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer del Migdia, 31, Baixos",
+    "addressLocality": "Vilafranca del Penedès",
+    "postalCode": "08720",
+    "addressRegion": "Barcelona",
+    "addressCountry": "ES"
+  },
+  "openingHours": "Mo-Fr 08:00-14:00",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "46" },
+  "url": "https://www.gestoriaplanas.com/"
+}
+</script>
+<style>
+  :root {
+    --navy: #16324f;
+    --navy-dark: #0e2338;
+    --accent: #b98a3f;
+    --accent-light: #d9b06a;
+    --bg: #f7f5f1;
+    --card: #ffffff;
+    --text: #24303c;
+    --muted: #5f6d7a;
+    --line: #e3ded5;
+    --wa: #25d366;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.65; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+  a { color: var(--navy); }
+
+  .es { display: none; }
+  body.lang-es .es { display: revert; }
+  body.lang-es .ca { display: none; }
+
+  nav { position: sticky; top: 0; z-index: 50; background: var(--navy); color: #fff;
+    display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+  nav .brand { font-family: Georgia, serif; font-size: 18px; letter-spacing: .5px; }
+  nav .brand span { color: var(--accent-light); }
+  .langs button { background: none; border: 1px solid rgba(255,255,255,.35); color: #fff;
+    padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; margin-left: 6px; }
+  .langs button.active { background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  header { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%); color: #fff;
+    padding: 76px 0 64px; text-align: center; }
+  header h1 { font-size: clamp(30px, 5vw, 46px); letter-spacing: .5px; }
+  header .tagline { margin-top: 14px; font-size: clamp(16px, 2.5vw, 20px); color: #cdd8e2; }
+  .rating-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+    background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.2);
+    padding: 8px 18px; border-radius: 999px; font-size: 15px; }
+  .rating-badge .stars { color: var(--accent-light); letter-spacing: 2px; }
+  .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 30px; border-radius: 9px; text-decoration: none;
+    font-weight: 700; font-size: 16px; transition: transform .12s, box-shadow .12s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .btn-accent { background: var(--accent); color: #fff; }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.5); }
+
+  section { padding: 58px 0; }
+  h2 { color: var(--navy); font-size: clamp(24px, 3.5vw, 32px); margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 30px; max-width: 640px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 24px; box-shadow: 0 1px 3px rgba(22,50,79,.06); }
+  .card .icon { font-size: 26px; }
+  .card h3 { color: var(--navy); font-size: 18px; margin: 10px 0 8px; }
+  .card p { font-size: 14.5px; color: var(--muted); }
+  .card a.more { font-size: 14px; font-weight: 600; }
+
+  .depts { background: var(--navy); color: #fff; }
+  .depts h2 { color: #fff; }
+  .depts .sub { color: #b9c7d3; }
+  .dept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .dept { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+    border-radius: var(--radius); padding: 20px; text-align: center; }
+  .dept .name { font-weight: 600; margin-bottom: 4px; }
+  .dept .num { color: #cdd8e2; font-size: 15px; margin-bottom: 14px; }
+  .dept a { display: inline-block; background: var(--wa); color: #fff; text-decoration: none;
+    padding: 9px 20px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+
+  .reviews-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 26px; }
+  .score { font-family: Georgia, serif; font-size: 54px; color: var(--navy); font-weight: 700; }
+  .review { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px; font-size: 15px; color: var(--muted); font-style: italic; }
+  .review .who { margin-top: 10px; font-style: normal; font-weight: 600; color: var(--text); font-size: 14px; }
+  .placeholder-note { font-size: 12.5px; color: #a08c66; margin-top: 10px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+  .info-line { display: flex; gap: 12px; margin-bottom: 14px; font-size: 15.5px; }
+  .info-line .ic { width: 22px; text-align: center; }
+  form .field { margin-bottom: 14px; }
+  label { display: block; font-size: 13.5px; color: var(--muted); margin-bottom: 5px; }
+  input, textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px;
+    background: #fff; font-size: 15px; font-family: inherit; outline: none; }
+  input:focus, textarea:focus { border-color: var(--accent); }
+  form button { width: 100%; padding: 14px; background: var(--navy); color: #fff; border: none;
+    border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; }
+  form button:hover { background: var(--navy-dark); }
+
+  footer { background: var(--navy-dark); color: #9fb2c2; text-align: center; padding: 28px 20px; font-size: 14px; }
+  footer a { color: #cdd8e2; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Gestoria <span>Planas</span> i Associats</div>
+  <div class="langs">
+    <button id="btnCa" class="active" onclick="setLang('ca')">CAT</button>
+    <button id="btnEs" onclick="setLang('es')">ESP</button>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <h1>Gestoria Planas i Associats</h1>
+    <p class="tagline ca">La teva gestoria de confiança a Vilafranca del Penedès</p>
+    <p class="tagline es">Tu gestoría de confianza en Vilafranca del Penedès</p>
+    <div class="rating-badge">
+      <span class="stars">★★★★½</span>
+      <strong>4,5</strong>
+      <span class="ca">· 46 ressenyes a Google</span>
+      <span class="es">· 46 reseñas en Google</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-accent" href="tel:+34938170495"><span class="ca">Truca'ns · 938 17 04 95</span><span class="es">Llámanos · 938 17 04 95</span></a>
+      <a class="btn btn-wa" href="https://wa.me/34938170495">WhatsApp</a>
+      <a class="btn btn-ghost" href="#serveis"><span class="ca">Els nostres serveis</span><span class="es">Nuestros servicios</span></a>
+    </div>
+  </div>
+</header>
+
+<section id="serveis">
+  <div class="wrap">
+    <h2 class="ca">Serveis</h2><h2 class="es">Servicios</h2>
+    <p class="sub ca">Assessorament integral per a particulars, autònoms i empreses de l'Alt Penedès.</p>
+    <p class="sub es">Asesoramiento integral para particulares, autónomos y empresas del Alt Penedès.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">📊</div>
+        <h3 class="ca">Fiscal, financer i comptable</h3><h3 class="es">Fiscal, financiero y contable</h3>
+        <p class="ca">IRPF, IVA, Impost de Societats, retencions, renda i patrimoni. Equip especialitzat amb atenció 100% personalitzada.</p>
+        <p class="es">IRPF, IVA, Impuesto de Sociedades, retenciones, renta y patrimonio. Equipo especializado con atención 100% personalizada.</p>
+      </div>
+      <div class="card"><div class="icon">👥</div>
+        <h3 class="ca">Laboral i Seguretat Social</h3><h3 class="es">Laboral y Seguridad Social</h3>
+        <p class="ca">Altes d'empreses, nòmines i assegurances socials, contractacions, cotitzacions, liquidacions i indemnitzacions.</p>
+        <p class="es">Altas de empresas, nóminas y seguros sociales, contrataciones, cotizaciones, liquidaciones e indemnizaciones.</p>
+      </div>
+      <div class="card"><div class="icon">🏢</div>
+        <h3 class="ca">Mercantil · Creació i gestió de Pimes</h3><h3 class="es">Mercantil · Creación y gestión de Pymes</h3>
+        <p class="ca">T'ajudem a crear la teva empresa des de zero: constitució de societats i assessorament integral per a autònoms.</p>
+        <p class="es">Te ayudamos a crear tu empresa desde cero: constitución de sociedades y asesoramiento integral para autónomos.</p>
+      </div>
+      <div class="card"><div class="icon">🚗</div>
+        <h3 class="ca">Vehicles i transports</h3><h3 class="es">Vehículos y transportes</h3>
+        <p class="ca">Matriculacions, baixes, canvis de titularitat, visats, targetes de transport i maquinària agrícola.</p>
+        <p class="es">Matriculaciones, bajas, cambios de titularidad, visados, tarjetas de transporte y maquinaria agrícola.</p>
+      </div>
+      <div class="card"><div class="icon">🛡️</div>
+        <h3 class="ca">Assegurances</h3><h3 class="es">Seguros</h3>
+        <p class="ca">Vida, llar, vehicles, viatge, negocis i salut. Busquem l'assegurança que més s'adapti a tu, sense compromís.</p>
+        <p class="es">Vida, hogar, vehículos, viaje, negocios y salud. Buscamos el seguro que más se adapte a ti, sin compromiso.</p>
+      </div>
+      <div class="card"><div class="icon">🏠</div>
+        <h3 class="ca">Gestió immobiliària</h3><h3 class="es">Gestión inmobiliaria</h3>
+        <p class="ca">Compravenda, lloguers, certificats energètics, cèdules d'habitabilitat i declaracions d'obra nova.</p>
+        <p class="es">Compraventa, alquileres, certificados energéticos, cédulas de habitabilidad y declaraciones de obra nueva.</p>
+        <a class="more" href="https://www.finquesplanas.com/" target="_blank" rel="noopener">finquesplanas.com →</a>
+      </div>
+      <div class="card"><div class="icon">📜</div>
+        <h3 class="ca">Contractes, herències i donacions</h3><h3 class="es">Contratos, herencias y donaciones</h3>
+        <p class="ca">Valoracions, escriptures, titularitats, liquidacions, successions i donatius amb assessorament integral.</p>
+        <p class="es">Valoraciones, escrituras, titularidades, liquidaciones, sucesiones y donativos con asesoramiento integral.</p>
+      </div>
+      <div class="card"><div class="icon">🚀</div>
+        <h3 class="ca">Startups</h3><h3 class="es">Startups</h3>
+        <p class="ca">Creació i gestió d'startups amb solució global a totes les àrees i direcció financera a temps parcial.</p>
+        <p class="es">Creación y gestión de startups con solución global en todas las áreas y dirección financiera a tiempo parcial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depts">
+  <div class="wrap">
+    <h2 class="ca">Escriu directament al teu departament</h2>
+    <h2 class="es">Escribe directamente a tu departamento</h2>
+    <p class="sub ca">Servei de WhatsApp: contacta amb l'especialista que necessites sense esperes.</p>
+    <p class="sub es">Servicio de WhatsApp: contacta con el especialista que necesitas sin esperas.</p>
+    <div class="dept-grid">
+      <div class="dept">
+        <div class="name ca">Vehicles</div><div class="name es">Vehículos</div>
+        <div class="num">685 228 556</div>
+        <a href="https://wa.me/34685228556">WhatsApp</a>
+      </div>
+      <div class="dept">
+        <div class="name">Laboral</div>
+        <div class="num">654 907 990</div>
+        <a href="https://wa.me/34654907990">WhatsApp</a>
+      </div>
+      <div class="dept">
+        <div class="name">Fiscal / Comptable</div>
+        <div class="num">654 579 389</div>
+        <a href="https://wa.me/34654579389">WhatsApp</a>
+      </div>
+      <div class="dept">
+        <div class="name ca">Comptabilitat</div><div class="name es">Contabilidad</div>
+        <div class="num">635 374 017</div>
+        <a href="https://wa.me/34635374017">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="ca">Què diuen els nostres clients</h2>
+    <h2 class="es">Qué dicen nuestros clientes</h2>
+    <div class="reviews-head">
+      <div class="score">4,5</div>
+      <div>
+        <div style="color:var(--accent);font-size:20px;letter-spacing:2px;">★★★★½</div>
+        <div class="ca" style="color:var(--muted);font-size:14px;">46 ressenyes a Google</div>
+        <div class="es" style="color:var(--muted);font-size:14px;">46 reseñas en Google</div>
+      </div>
+      <a href="https://maps.google.com/?cid=4697583555347001605" target="_blank" rel="noopener" style="font-size:14px;">
+        <span class="ca">Veure a Google Maps →</span><span class="es">Ver en Google Maps →</span>
+      </a>
+    </div>
+    <div class="grid">
+      <div class="review">
+        <span class="ca">«Tracte proper i professional. Fa anys que ens porten la gestoria i sempre resolen.»</span>
+        <span class="es">«Trato cercano y profesional. Hace años que nos llevan la gestoría y siempre resuelven.»</span>
+        <div class="who">— Placeholder</div>
+      </div>
+      <div class="review">
+        <span class="ca">«Molt àgils amb els tràmits de vehicles. Tot per WhatsApp, sense desplaçaments.»</span>
+        <span class="es">«Muy ágiles con los trámites de vehículos. Todo por WhatsApp, sin desplazamientos.»</span>
+        <div class="who">— Placeholder</div>
+      </div>
+      <div class="review">
+        <span class="ca">«Ens van acompanyar en la creació de l'empresa de principi a fi. Recomanables.»</span>
+        <span class="es">«Nos acompañaron en la creación de la empresa de principio a fin. Recomendables.»</span>
+        <div class="who">— Placeholder</div>
+      </div>
+    </div>
+    <p class="placeholder-note ca">⚠ Cites provisionals — substituir per ressenyes reals de Google amb permís dels autors.</p>
+    <p class="placeholder-note es">⚠ Citas provisionales — sustituir por reseñas reales de Google con permiso de los autores.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="ca">On som i com contactar</h2>
+    <h2 class="es">Dónde estamos y cómo contactar</h2>
+    <div class="contact-grid" style="margin-top:24px">
+      <div>
+        <div class="info-line"><span class="ic">📍</span><span>Carrer del Migdia, 31, Baixos<br>08720 Vilafranca del Penedès (Barcelona)</span></div>
+        <div class="info-line"><span class="ic">🕗</span>
+          <span class="ca">Atenció al públic: de dilluns a divendres, 8.00 – 14.00 h</span>
+          <span class="es">Atención al público: de lunes a viernes, 8.00 – 14.00 h</span></div>
+        <div class="info-line"><span class="ic">📞</span><a href="tel:+34938170495">938 17 04 95</a></div>
+        <div class="info-line"><span class="ic">✉️</span><a href="mailto:info@gestoriaplanas.com">info@gestoriaplanas.com</a></div>
+        <div class="info-line"><span class="ic">🗺️</span>
+          <a href="https://maps.google.com/?cid=4697583555347001605" target="_blank" rel="noopener">
+            <span class="ca">Obrir a Google Maps</span><span class="es">Abrir en Google Maps</span></a></div>
+      </div>
+      <div>
+        <form id="contactForm">
+          <div class="field">
+            <label for="fname"><span class="ca">Nom i cognoms</span><span class="es">Nombre y apellidos</span></label>
+            <input id="fname" type="text" required>
+          </div>
+          <div class="field">
+            <label for="femail"><span class="ca">Correu electrònic</span><span class="es">Correo electrónico</span></label>
+            <input id="femail" type="email" required>
+          </div>
+          <div class="field">
+            <label for="fmsg"><span class="ca">Missatge</span><span class="es">Mensaje</span></label>
+            <textarea id="fmsg" rows="4" required></textarea>
+          </div>
+          <button type="submit"><span class="ca">Enviar consulta</span><span class="es">Enviar consulta</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>Gestoria Planas i Associats · Carrer del Migdia, 31, 08720 Vilafranca del Penedès</div>
+  <div style="margin-top:6px"><a href="tel:+34938170495">938 17 04 95</a> · <a href="mailto:info@gestoriaplanas.com">info@gestoriaplanas.com</a> · <a href="https://www.finquesplanas.com/" target="_blank" rel="noopener">finquesplanas.com</a></div>
+  <div style="margin-top:6px">© <span id="year"></span> Gestoria Planas i Associats</div>
+</footer>
+
+<script>
+function setLang(l) {
+  document.body.classList.toggle('lang-es', l === 'es');
+  document.documentElement.lang = l;
+  document.getElementById('btnCa').classList.toggle('active', l === 'ca');
+  document.getElementById('btnEs').classList.toggle('active', l === 'es');
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('fname').value;
+  var email = document.getElementById('femail').value;
+  var msg = document.getElementById('fmsg').value;
+  var body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+  location.href = 'mailto:info@gestoriaplanas.com?subject=' +
+    encodeURIComponent('Consulta web — ' + name) + '&body=' + body;
+});
+</script>
+</body>
+</html>
