@@ -76,7 +76,8 @@
     border-bottom: 1px solid var(--hairline); }
   nav .bar { max-width: 1280px; margin: 0 auto; padding: 12px 24px;
     display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  nav .brand { font-weight: 600; font-size: 16px; letter-spacing: -.4px; }
+  nav .brand { font-weight: 600; font-size: 16px; letter-spacing: -.4px; display: flex; align-items: center; gap: 10px; }
+  nav .brand img { height: 28px; width: auto; display: block; }
   nav .langs { display: flex; gap: 8px; }
   nav .langs button { height: 32px; padding: 0 12px; border-radius: var(--r-pill);
     border: 1px solid var(--hairline); background: transparent; color: var(--ink);
@@ -134,6 +135,16 @@
   .field { margin-bottom: 12px; }
   form .btn { width: 100%; }
 
+  .hero-media { margin-top: 40px; }
+  .hero-media img { width: 100%; display: block; border-radius: var(--r-card);
+    border: 1px solid var(--hairline); box-shadow: var(--shadow-card); }
+  .card-photo { width: 100%; height: 150px; object-fit: cover;
+    border-radius: var(--r-nested); display: block; }
+  .logos { display: flex; gap: 32px; flex-wrap: wrap; align-items: center; justify-content: center;
+    background: var(--paper); border: 1px solid var(--hairline); border-radius: var(--r-card);
+    box-shadow: var(--shadow-card); padding: 20px; margin-bottom: 32px; }
+  .logos img { height: 40px; width: auto; filter: grayscale(1); opacity: .7; }
+
   footer { border-top: 1px solid var(--hairline); background: var(--surface-alt);
     padding: 32px 0; color: var(--mid); }
   footer .cols { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -144,7 +155,7 @@
 
 <nav>
   <div class="bar">
-    <div class="brand">Gestoria Planas <span style="color:var(--mid);font-weight:400">i Associats</span></div>
+    <div class="brand"><img src="images/logo.png" alt="Gestoria Planas i Associats"><span style="color:var(--mid);font-weight:400">i Associats</span></div>
     <div class="langs">
       <button id="btnCa" class="active" onclick="setLang('ca')">CAT</button>
       <button id="btnEs" onclick="setLang('es')">ESP</button>
@@ -169,6 +180,7 @@
       <a class="btn btn-secondary" href="https://wa.me/34938170495">WhatsApp</a>
       <a class="btn btn-outline" href="#serveis"><span class="ca">Veure serveis</span><span class="es">Ver servicios</span></a>
     </div>
+    <div class="hero-media"><img src="images/hero.jpg" alt="Gestoria Planas — Vilafranca del Penedès"></div>
   </div>
 </header>
 
@@ -183,50 +195,50 @@
     </div>
     <div class="grid">
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <img class="card-photo" src="images/fiscal.jpg" alt="">
         <h3 class="ca">Fiscal, financer i comptable</h3><h3 class="es">Fiscal, financiero y contable</h3>
         <p class="ca">IRPF, IVA, Impost de Societats, retencions, renda i patrimoni amb atenció 100% personalitzada.</p>
         <p class="es">IRPF, IVA, Impuesto de Sociedades, retenciones, renta y patrimonio con atención 100% personalizada.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <img class="card-photo" src="images/laboral.jpg" alt="">
         <h3 class="ca">Laboral i Seguretat Social</h3><h3 class="es">Laboral y Seguridad Social</h3>
         <p class="ca">Altes d'empreses, nòmines, contractacions, cotitzacions, liquidacions i indemnitzacions.</p>
         <p class="es">Altas de empresas, nóminas, contrataciones, cotizaciones, liquidaciones e indemnizaciones.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <img class="card-photo" src="images/mercantil.jpg" alt="">
         <h3 class="ca">Mercantil · Creació de Pimes</h3><h3 class="es">Mercantil · Creación de Pymes</h3>
         <p class="ca">Constitució de societats des de zero i assessorament integral per a autònoms.</p>
         <p class="es">Constitución de sociedades desde cero y asesoramiento integral para autónomos.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 17H3v-4l2-5h12l3 5h1v4h-2"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></div>
+        <img class="card-photo" src="images/vehicles.jpg" alt="">
         <h3 class="ca">Vehicles i transports</h3><h3 class="es">Vehículos y transportes</h3>
         <p class="ca">Matriculacions, baixes, canvis de titularitat, visats, targetes de transport i maquinària agrícola.</p>
         <p class="es">Matriculaciones, bajas, cambios de titularidad, visados, tarjetas de transporte y maquinaria agrícola.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <img class="card-photo" src="images/assegurances.jpg" alt="">
         <h3 class="ca">Assegurances</h3><h3 class="es">Seguros</h3>
         <p class="ca">Vida, llar, vehicles, viatge, negocis i salut. Busquem la que més s'adapti a tu, sense compromís.</p>
         <p class="es">Vida, hogar, vehículos, viaje, negocios y salud. Buscamos el que más se adapte a ti, sin compromiso.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg></div>
+        <img class="card-photo" src="images/immobiliaria.jpg" alt="">
         <h3 class="ca">Gestió immobiliària</h3><h3 class="es">Gestión inmobiliaria</h3>
         <p class="ca">Compravenda, lloguers, certificats energètics, cèdules d'habitabilitat i obra nova.</p>
         <p class="es">Compraventa, alquileres, certificados energéticos, cédulas de habitabilidad y obra nueva.</p>
         <a class="more" href="https://www.finquesplanas.com/" target="_blank" rel="noopener">finquesplanas.com →</a>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6M9 11h2"/></svg></div>
+        <img class="card-photo" src="images/herencies.jpg" alt="">
         <h3 class="ca">Contractes, herències i donacions</h3><h3 class="es">Contratos, herencias y donaciones</h3>
         <p class="ca">Valoracions, escriptures, titularitats, liquidacions, successions i donatius.</p>
         <p class="es">Valoraciones, escrituras, titularidades, liquidaciones, sucesiones y donativos.</p>
       </div>
       <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
+        <img class="card-photo" src="images/startups.jpg" alt="">
         <h3>Startups</h3>
         <p class="ca">Creació i gestió d'startups amb direcció financera a temps parcial.</p>
         <p class="es">Creación y gestión de startups con dirección financiera a tiempo parcial.</p>
@@ -280,6 +292,14 @@
         <span class="caption ca">Àrees de servei</span><span class="caption es">Áreas de servicio</span>
         <div class="value">8</div>
       </div>
+    </div>
+    <div class="logos">
+      <img src="images/gestors-administratius.jpg" alt="Col·legi de Gestors Administratius">
+      <img src="images/api.jpg" alt="API">
+      <img src="images/catalana-occidente.png" alt="Catalana Occidente">
+      <img src="images/allianz.png" alt="Allianz">
+      <img src="images/mussap.jpg" alt="Mussap">
+      <img src="images/finques-planas.jpg" alt="Finques Planas">
     </div>
     <div class="grid">
       <div class="card review">
